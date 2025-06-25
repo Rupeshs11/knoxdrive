@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KnoxDrive – Upload to AWS S3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            color: #00ffe7;
+            margin-bottom: 40px;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0 0 20px #00ffe7;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 2px dashed #00ffe7;
+            border-radius: 8px;
+            background-color: #ffffff10;
+            color: #00ffe7;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            background-color: #00ffe7;
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00c6b5;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 KnoxDrive</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required><br><br>
+        <button type="submit">Upload to S3</button>
+    </form>
+</body>
+</html>
